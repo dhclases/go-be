@@ -7,18 +7,22 @@
 // Aqui definimos el punto de entrada principal: El paquete mai
 package main
 
+import (
+	"fmt"
+)
+
 // Asi importamos las libreria. modo simple
 /*
+   import "fmt"
+
    el modo agrupado es
 	import (
 		"fmt"
 		"http"
+		"time"
 	)
 
 */
-import (
-	"fmt"
-)
 
 // Definicion de structura: Esto lo vemos luego en detalle
 type User struct {
@@ -26,11 +30,20 @@ type User struct {
 	occupation string
 }
 
+// Este proceso corren antes de commenzar el main()
+/*
 func init() {
 	fmt.Println("Inicializando el programa principal")
 }
 
+*/
+
 func main() {
+	/*
+		fmt.Println("Hola Digital")
+		fmt.Printf("Esto es un numero:%v \n", 2323232)
+		fmt.Printf("Esto es un numero:%T \n", 2323232)
+	*/
 	/*
 	   Declaracion de variables
 	*/
@@ -45,31 +58,33 @@ func main() {
 
 	*/
 	/*
-			// Entero explicitamente
-			var miEntero int = 1
-			fmt.Printf("Mientero: %d \n", miEntero)
-			fmt.Printf("Mientero es del tipo: %T \n", miEntero)
+		// Entero explicitamente
+		var miEntero int = 1
+		fmt.Printf("Mientero: %d \n", miEntero)
+		fmt.Printf("Mientero es del tipo: %T \n", miEntero)
 
-			// Entero8 explicitamente
-			var miEntero8 int = 8
-			fmt.Printf("Mientero8 : %d \n", miEntero8)
-			fmt.Printf("Mientero8 es del tipo: %T \n", miEntero8)
+		// Entero8 explicitamente
+		var miEntero8 int8 = 8
+		fmt.Printf("Mientero8 : %d \n", miEntero8)
+		fmt.Printf("Mientero8 es del tipo: %T \n", miEntero8)
 
-			// Entero16 explicitamente
-			var miEntero16 int = 16
-			fmt.Printf("Mientero16: %d \n", miEntero16)
-			fmt.Printf("Mientero16 es del tipo: %T \n", miEntero16)
+		// Entero16 explicitamente
+		var miEntero16 int16 = 16
+		fmt.Printf("Mientero16: %d \n", miEntero16)
+		fmt.Printf("Mientero16 es del tipo: %T \n", miEntero16)
 
-			// Entero32 explicitamente
-			var miEntero32 int = 32
-			fmt.Printf("Mientero32: %d \n", miEntero32)
-			fmt.Printf("Mientero32 es del tipo: %T \n", miEntero32)
+		// Entero32 explicitamente
+		var miEntero32 int32 = 32
+		fmt.Printf("Mientero32: %d \n", miEntero32)
+		fmt.Printf("Mientero32 es del tipo: %T \n", miEntero32)
 
-			// Entero64 implicitament
-			miEntero64 := 64
-			fmt.Printf("Mientero64: %d \n", miEntero64)
-			fmt.Printf("Mientero64 es del tipo: %T \n", miEntero64)
+		// Entero64 implicitament
+		miEntero7 := 64
+		fmt.Printf("Mientero7: %d \n", miEntero7)
+		fmt.Printf("Mientero7 es del tipo: %T \n", miEntero7)
 
+	*/
+	/*
 			// **** Variables float ***
 
 			var miFloat32 float32 = 32.02
@@ -86,45 +101,54 @@ func main() {
 			fmt.Printf("Mi estaActivo: %v \n", estaActivo)
 			fmt.Printf("Mi estaActivo es del tipo: %T \n", estaActivo)
 
-			// *** Definir una constante
-			const tipo_usuario = "admin"
-			fmt.Printf("Mi tipo_usuario: %v \n", tipo_usuario)
-			fmt.Printf("Mi tipo_usuario es del tipo: %T \n", tipo_usuario)
+		// *** Definir una constante
+		const tipo_usuario = "admin"
+		fmt.Printf("Mi tipo_usuario: %v \n", tipo_usuario)
+		fmt.Printf("Mi tipo_usuario es del tipo: %T \n", tipo_usuario)
 
-			// ** Declaracion en bloque
-			var (
-				esCliente bool = false
-				monto          = 0.0
-			)
-			fmt.Printf("Mi esCliente: %v  y monto: %v \n", esCliente, monto)
+	*/
+	/*
+		// ** Declaracion en bloque
+		var (
+			esCliente bool = false
+			monto          = 0.0
+		)
+		fmt.Printf("Mi esCliente: %v  y monto: %v \n", esCliente, monto)
 
-			// ** Declaracion en bloque
-			const (
-				constante1 = false
-				constante2 = 0.0
-				constante3 = "esta es un string"
-			)
-			fmt.Printf("constante1: %v , constante2: %v constante3: %v \n", constante1, constante2, constante3)
+		// ** Declaracion en bloque
+		const (
+			constante1 = false
+			constante2 = 0.0
+			constante3 = "esta es un string"
+		)
+		fmt.Printf("constante1: %v , constante2: %v constante3: %v \n", constante1, constante2, constante3)
+				// ** Declaracion de string
+	*/
+	/*
+		var cadena1 string = "esta es la cadena 1"
+		cadena2 := "esta es la cadena 2"
+		fmt.Printf("cadena1: %v , cadena2: %v \n", cadena1, cadena2)
 
-			// ** Declaracion de string
+		// ** Declaracion multiples
+		var a, b, c = 5.25, 25.25, 14.15 // Multiple float32
+		fmt.Println(a, b, c)
 
-			var cadena1 string = "esta es la cadena 1"
-			cadena2 := "esta es la cadena 2"
-			fmt.Printf("cadena1: %v , cadena2: %v \n", cadena1, cadena2)
-
-			// ** Declaracion multiples
-			var a, b, c = 5.25, 25.25, 14.15 // Multiple float32
-			fmt.Println(a, b, c)
-
+	*/
+	/*
 		// *** Arreglos / Array
 		var intArreglos [5]int
+
 		vals := []int{1, 2, 3, 4, 5}
+
 		var y [5]int = [5]int{10, 20, 30} // Asignacion parcial
-		x := [...]int{10, 20, 30}         // Inicializacion con ellipses ...
-		z := [5]int{1: 10, 3: 30}         // Inicializar con indice especifico
+
+		x := [...]int{10, 20, 30} // Inicializacion con ellipses ...
+
+		z := [5]int{1: 10, 3: 30} // Inicializar con indice especifico
 
 		// Asignacion
 		intArreglos[0] = 100
+
 		// Acceso
 		fmt.Printf("Valor de intArreglos[0]: %v \n", intArreglos[0])
 		fmt.Printf("Valor de y : %v \n", y[0])
@@ -133,6 +157,10 @@ func main() {
 		fmt.Printf("Valores: %v \n", vals[0])
 		fmt.Printf("Tipo de dato de intArreglos : %T \n", intArreglos)
 
+		fmt.Printf("Valores: %v \n", y[3])
+	*/
+
+	/*
 		// Declaracin implicita
 
 		// *** Estructura / Struct
@@ -142,19 +170,21 @@ func main() {
 
 	// *** Slices
 	/*
-			n Slice es una "ventana" a un Array que se compone de 3 cosas.
+		n Slice es una "ventana" a un Array que se compone de 3 cosas.
 
-			(1) Puntero: el puntero se utiliza para apuntar al primer elemento del Array al que se puede acceder a través del slice.
-			(2) Longitud: La longitud es el número total de elementos presentes en el Array.
-			(3) Capacidad: La capacidad representa el tamaño máximo del Array.
+		(1) Puntero: el puntero se utiliza para apuntar al primer elemento del Array al que se puede acceder a través del slice.
+		(2) Longitud: La longitud es el número total de elementos presentes en el Array.
+		(3) Capacidad: La capacidad representa el tamaño máximo del Array.
 
-
+	*/
+	/*
 		var intSliceVacio []int // Inicializar vacio
 		fmt.Printf("intSlice \tLen: %v \tCap: %v \tTipo: %T \n", len(intSliceVacio), cap(intSliceVacio), intSliceVacio)
 
 		// Declaracion con Make
 		var intSlice02 = make([]int, 10)        // La misma longitud y capacidad
 		var strSlice02 = make([]string, 10, 20) // Con diferente longitud y capacidad
+
 		fmt.Printf("intSlice02 \tLen: %v \tCap: %v \tTipo: %T \n", len(intSlice02), cap(intSlice02), intSlice02)
 		fmt.Printf("strSlice02 \tLen: %v \tCap: %v \tTipo: %T \n", len(strSlice02), cap(strSlice02), strSlice02)
 
@@ -166,8 +196,9 @@ func main() {
 
 		fmt.Printf("intSlice02 \tLen: %v \tCap: %v \tTipo: %T \n", len(intSlice02), cap(intSlice02), intSlice02)
 		fmt.Printf("intSlice02 \titem 0 : %v \n", intSlice02[0])
-		fmt.Printf("intSlice02 \titem 0 : %v \n", intSlice02[110])
-
+		fmt.Printf("intSlice02 \titem 0 : %v \n", intSlice02[0])
+	*/
+	/*
 		var numSlice = []int{10, 20, 30, 40}
 		var paisesSlice = []string{"India", "Canada", "Japan"}
 
@@ -205,37 +236,39 @@ func main() {
 			"no": "Noruega",
 		} // Defincion Implicita
 		fmt.Printf("Paises: %v \n", paises["de"])
+	*/
 
-			// *** Conversion de Datos
+	// *** Conversion de Datos
+	/*
+		// *** Int to String
+		miEntero2 := 300
+		varString1 := strconv.Itoa(miEntero2)
+		fmt.Printf("varString1: %v \n", varString1)
+		fmt.Printf("miEntero: %v \n", miEntero2)
 
-			// *** Int to String
+		// *** String to int
 
-			varString1 := strconv.Itoa(miEntero)
-			fmt.Printf("varString1: %v \n", varString1)
-			fmt.Printf("miEntero: %v \n", miEntero)
+		strVar := "100"
+		// NOTA: Recepcion multiple de valores: El valor convertido y un error si ocurriese
+		intVar, err := strconv.Atoi(strVar)
 
-			// *** String to int
 
-			strVar := "100"
-			// NOTA: Recepcion multiple de valores: El valor convertido y un error si ocurriese
-			intVar, err := strconv.Atoi(strVar)
-			fmt.Printf("varString2: %v \n", strVar)
-			fmt.Printf("entero: %d. error: %v \n", intVar, err)
+		fmt.Printf("varString2: %v \n", strVar)
+		fmt.Printf("entero: %d. error: %v \n", intVar, err)
 
-			strVar2 := "2"
+		strVar2 := "2"
 
-			intVar8, err := strconv.ParseInt(strVar2, 0, 8)
-			fmt.Printf(" intVar8 : %v,   error: %v, Tipo: %T \n", intVar8, err, intVar)
+		intVar8, err := strconv.ParseInt(strVar2, 0, 8)
+		fmt.Printf(" intVar8 : %v,   error: %v, Tipo: %T \n", intVar8, err, intVar)
 
-			intVar16, err := strconv.ParseInt(strVar, 0, 16)
-			fmt.Printf(" intVar16: %v, error: %v, Tipo: %T \n", intVar16, err, intVar)
+		intVar16, err := strconv.ParseInt(strVar, 0, 16)
+		fmt.Printf(" intVar16: %v, error: %v, Tipo: %T \n", intVar16, err, intVar)
 
-			intVar32, err := strconv.ParseInt(strVar, 0, 32)
-			fmt.Printf(" intVar32: %v, error: %v, Tipo: %T \n", intVar32, err, intVar)
+		intVar32, err := strconv.ParseInt(strVar, 0, 32)
+		fmt.Printf(" intVar32: %v, error: %v, Tipo: %T \n", intVar32, err, intVar)
 
-			intVar64, err := strconv.ParseInt(strVar, 0, 64)
-			fmt.Printf(" intVar64: %v, error: %v, Tipo: %T \n", intVar64, err, intVar)
-
+		intVar64, err := strconv.ParseInt(strVar, 0, 64)
+		fmt.Printf(" intVar64: %v, error: %v, Tipo: %T \n", intVar64, err, intVar)
 	*/
 
 	/*
@@ -290,7 +323,8 @@ func main() {
 		} else {
 			fmt.Println("El numero es:" + strconv.Itoa(numero))
 		}
-
+	*/
+	/*
 		today := time.Now()
 
 		switch today.Day() {
@@ -309,20 +343,47 @@ func main() {
 		default:
 			fmt.Println("Sin informacion.")
 		}
-	*/
 
+		i := 45
+
+		switch {
+		case i < 10:
+			fmt.Println("i es menos de 10")
+		case i < 50:
+			fmt.Println("i es menos de 50")
+		case i < 100:
+			fmt.Println("i es menos de 100")
+		}
+
+		fmt.Println(" Segunda evaluacion ")
+
+		i2 := 45
+		switch {
+		case i2 < 10:
+			fmt.Println("i es menos de 10")
+			fallthrough // Evalua la siguiente condicion
+		case i2 < 50:
+			fmt.Println("i es menos de 50")
+			fallthrough
+		case i2 < 100:
+			fmt.Println("i es menos de 100")
+		}
+	*/
 	// *** Bucles / Loop
 	const max = 3
+
 	for k := 1; k <= max; k++ {
 		fmt.Printf("Bucle 1 k=%v \n", k)
 	}
 	fmt.Println(" *** Fin Bucle 1")
 
 	k := 1
+
 	for ; k <= max; k++ {
 		fmt.Printf("Bucle 2 k=%v \n", k)
 	}
 	fmt.Println(" *** Fin Bucle 2")
+
 	k = 1
 	for k <= max {
 		fmt.Printf("Bucle 3 k=%v \n", k)
