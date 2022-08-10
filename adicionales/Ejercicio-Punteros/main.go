@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 
@@ -25,8 +28,9 @@ func main() {
 	printHeader("*** Struct por referencia ***")
 
 	p := Person{
-		Name: "John",
-		Age:  21,
+		Name:        "John",
+		Age:         21,
+		DateOfBirth: time.Date(1980, 11, 17, 20, 34, 58, 651387237, time.UTC),
 	}
 
 	printHeader("*** Struct por valor ***")
@@ -116,8 +120,9 @@ func printHeader(s string) {
 }
 
 type Person struct {
-	Name string
-	Age  int
+	Name        string
+	Age         int
+	DateOfBirth time.Time
 }
 
 func (p *Person) mutablePerson() {
