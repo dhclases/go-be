@@ -6,27 +6,30 @@ import (
 )
 
 func main() {
+	/*
+		printHeader("*** Definir puntero ***")
+		definirPuntero()
+	*/
+	/*
+		printHeader("*** Inicializar puntero ***")
+		inicializarPuntero()
 
-	printHeader("*** Definir puntero ***")
-	definirPuntero()
+		printHeader("*** Desreferenciar el puntero ***")
+		DesreferenciarPuntero()
 
-	printHeader("*** Inicializar puntero ***")
-	inicializarPuntero()
 
-	printHeader("*** Desreferenciar el puntero ***")
-	DesreferenciarPuntero()
+						printHeader("*** Cambiar el valor atraves del puntero ***")
+						cambiarValorPorPuntero()
 
-	printHeader("*** Cambiar el valor atraves del puntero ***")
-	cambiarValorPorPuntero()
 
-	printHeader("*** Puntero de Puntero ***")
-	punteroDePuntero()
+					printHeader("*** Puntero de Puntero ***")
+					punteroDePuntero()
+				printHeader("*** Comparar Punteros ***")
+				compararPunteros()
 
-	printHeader("*** Comparar Punteros ***")
-	compararPunteros()
 
-	printHeader("*** Struct por referencia ***")
-
+			printHeader("*** Struct por referencia ***")
+	*/
 	p := Person{
 		Name:        "John",
 		Age:         21,

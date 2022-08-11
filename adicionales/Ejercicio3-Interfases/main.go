@@ -70,6 +70,7 @@ func (ud UserDrawing) Area() float64 {
 }
 
 func main() {
+
 	// Polimorfismo
 	printHeader("*** Interfaces *** ")
 
@@ -111,6 +112,7 @@ func main() {
 	s2 = Rectangle{4, 7}
 	fmt.Printf("(%v, %T)\n", s2, s2)
 	fmt.Printf("Shape area = %v\n", s.Area())
+
 }
 
 func printHeader(s string) {
