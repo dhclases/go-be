@@ -18,17 +18,18 @@ func main() {
 	// Varios defer y su invocaciones
 	deferExample2()
 
-	// uso de defer para recuperarno de un panic
+	// uso de defer para recuperarnos de un panic
 	deferExample3()
 
-	// uso de defer con funciones anónimas con o sin parametros
+	// uso de defer con funciones anónimas con o sin parámetros
 	deferExample4()
 
-	// uso para medir el tiempo de ejecucion de un proceso
-	// la funcion se duerme 2 segundos
+	// uso de defer para para medir el tiempo de ejecución de un proceso
+
+	// la funcion se duerme 2 segundos el main
 	deferExample5()
 
-	// medimos cuanto tardo el proceso
+	// medimos cuanto tardo el proceso main
 	defer func() {
 		fmt.Println("Este main tardo:")
 		fmt.Println(time.Since(t))
