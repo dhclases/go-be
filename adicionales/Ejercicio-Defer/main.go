@@ -1,11 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 /*
 Objetivo ver como usar defer
 */
 func main() {
+
+	t := time.Now()
+
 	// Uso de defer
 	deferExample1()
 
@@ -17,6 +23,16 @@ func main() {
 
 	// uso de defer con funciones anónimas con o sin parametros
 	deferExample4()
+
+	// uso para medir el tiempo de ejecucion de un proceso
+	// la funcion se duerme 2 segundos
+	deferExample5()
+
+	// medimos cuanto tardo el proceso
+	defer func() {
+		fmt.Println("Este main tardo:")
+		fmt.Println(time.Since(t))
+	}()
 
 }
 
@@ -103,4 +119,17 @@ func deferExample4() {
 	fmt.Println()
 	fmt.Println("*** Ejecutando defer Example 4")
 
+}
+
+func deferExample5() {
+	defer fmt.Println("Despertando de Example 5")
+	// Ejecucion normal
+	fmt.Println()
+	fmt.Println("*** Ejecutando defer Example 5")
+
+	fmt.Println()
+	fmt.Println("*** Inciar el domir el proceso 2 segundos")
+
+	// Calling Sleep method
+	time.Sleep(2 * time.Second)
 }
