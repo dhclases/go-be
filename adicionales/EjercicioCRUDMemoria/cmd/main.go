@@ -14,6 +14,7 @@ func main() {
 	// Definir el router
 	handler.NewHealthRouter(engine)
 	handler.NewProductRouter(engine, *handler.InitProductHandler())
+	handler.NewProductRouter(engine, *handler.InitProductHandler())
 
 	// Iniciar el servidor por el puerto 8080
 	engine.Run(":9001")
